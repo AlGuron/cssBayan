@@ -1,77 +1,106 @@
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #242204;
+    --box-width: 90vw;
+    --logo-font-size: 2.5rem;
+    --parag-font-size: 1rem;
 }
-.mem-info{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    background-color: #F5F5EB;
+    display: flex;
+    justify-content: center;
 }
+
 .main-class {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-    color: black;
-    text-decoration: none;
-    outline: none;
-
-}
-
-.box>.mem-anchor:focus>.mem-item,
-.box>.mem-anchor:active>.mem-item {
-    display: block;
-}
-
-p {
-    color: #D8D8D8;
-    font-size: 1rem;
+    width: var(--box-width);
 }
 
 .logo-title {
-    color: #D8D8D8;
-    width: 90vw;
-    margin: 4vw 0 0 0;
-
+    color: #000000;
+    width: var(--box-width);
+    margin-top: 4vw;
 }
 
 .box {
-    width: 90vw;
+    border-top: #D2D9E2 solid;
+    padding: 1vw 0 1vw 0;
+    width: var(--box-width);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* .mem-anchor {
-    font-size: 2rem;
-} */
+.mem-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1vw;
+
+}
 
 .mem-item {
     margin: 0;
     padding: 0;
-    display: none;
-    list-style-type: none
+    display: flex;
+    justify-content: center;
 }
 
 .mem-image {
     max-width: 100%;
+    display: none;
+    margin-bottom: 1vw;
 }
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+
+    text-decoration: none;
+    outline: none;
+
+}
+
+.box>.mem-anchor:focus .mem-image,
+.box>.mem-anchor:active .mem-image {
+    display: block;
+}
+
+p {
+    color: #0059D9;
+    font-size: var(--parag-font-size);
+    margin: 0;
+}
+
+.status {
+    visibility: hidden;   
+}
+
+
 
 @media (hover: hover) and (pointer: fine) {
 
-    .box>.mem-anchor:hover>.mem-item,
-    .box:hover>.mem-item {
+    .box>.mem-anchor:hover .mem-image,
+    .box:hover>.mem-image {
         display: block;
     }
+
+    .box:hover .status {
+        transform: rotate(45deg);        
+    }
+    .main-class:hover p {        
+            color: #000000;          
+    }    
+    .main-class:hover .status {
+        visibility: visible;
+    } 
 }
 
 
@@ -80,15 +109,22 @@ p {
 @media (min-width: 820px) {}
 
 @media (min-width: 1080px) {
+    body {
+        --box-width: 90vw;
+        --logo-font-size: 2.5rem;
+        --parag-font-size: 1.5rem;
+    }
+
     .logo-title {
-        width: 50vw;
-        font-size: 2.5rem;
+        width: var(--box-width);
+        font-size: var(--logo-font-size);
     }
 
     .box {
-        width: 50vw;
+        width: var(--box-width);
     }
-    p {        
-        font-size: 1.5rem;
+
+    p {
+        font-size: var(--parag-font-size);
     }
 }
