@@ -8,7 +8,7 @@ body {
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 900;
+    font-weight: bolder;
     background-color: #F5F5EB;
     display: flex;
     flex-direction: column;
@@ -94,6 +94,10 @@ a:active {
     opacity: 0.7;
 }
 
+.box>.mem-anchor:focus .status {
+    transform: rotate(45deg);
+    transition: all 0.1s ease;
+}
 
 p {
     color: #0059D9;
@@ -101,10 +105,11 @@ p {
     margin: 0;
 }
 
-.status {
-    visibility: hidden;
+@media (hover: hover) {
+    .status {
+        visibility: hidden;
+    }
 }
-
 
 
 @media (hover: hover) and (pointer: fine) {
@@ -119,6 +124,7 @@ p {
 
     .box:hover .status {
         transform: rotate(45deg);
+        transition: all 0.1s ease;
     }
 
     .main-class:hover p {
