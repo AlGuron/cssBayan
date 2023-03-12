@@ -1,7 +1,7 @@
 body {
     --box-width: 90vw;
     --img-width: 90vw;
-    --logo-font-size: 2.5rem;
+    --logo-font-size: 1.5rem;
     --parag-font-size: 1rem;
 }
 
@@ -28,6 +28,7 @@ body {
     color: #000000;
     width: var(--box-width);
     margin-top: 4vw;
+    font-size: var(--logo-font-size);
 }
 
 .box {
@@ -64,7 +65,6 @@ body {
     width: var(--img-width);
 }
 
-
 a:link,
 a:visited,
 a:hover,
@@ -77,6 +77,7 @@ a:active {
     height: auto;
     opacity: 1;
     transform: scale(1);
+    padding: 1vw 0 1vw 0;
 }
 
 .box>.mem-anchor:active .mem-image {
@@ -105,21 +106,18 @@ p {
     margin: 0;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
+
     .status {
         visibility: hidden;
     }
-}
-
-
-@media (hover: hover) and (pointer: fine) {
-
 
     .box:hover .mem-image {
         height: auto;
         opacity: 1;
         transform: scale(1);
         transition: all 1s ease;
+        padding: 1vw 0 1vw 0;
     }
 
     .box:hover .status {
@@ -136,29 +134,29 @@ p {
     }
 }
 
-
-@media (min-width: 320px) {}
-
-@media (min-width: 820px) {}
-
-@media (min-width: 1080px) {
+@media (min-width: 560px) {
     body {
-        --box-width: 90vw;
-        --img-width: 35vw;
+        --box-width: 70vw;
+        --img-width: 40vw;
+        --logo-font-size: 1.8rem;
+        --parag-font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 800px) {
+    body {
+        --box-width: 80vw;
+        --img-width: 70vw;
+        --logo-font-size: 3.5rem;
+        --parag-font-size: 2.2rem;
+    }
+}
+
+@media (min-width: 1000px) {
+    body {
+        --box-width: 50vw;
+        --img-width: 30vw;
         --logo-font-size: 2.5rem;
-        --parag-font-size: 1.5rem;
-    }
-
-    .logo-title {
-        width: var(--box-width);
-        font-size: var(--logo-font-size);
-    }
-
-    .box {
-        width: var(--box-width);
-    }
-
-    p {
-        font-size: var(--parag-font-size);
+        --parag-font-size: 1.7rem;
     }
 }
