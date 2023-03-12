@@ -3,7 +3,6 @@ body {
     --img-width: 90vw;
     --logo-font-size: 2.5rem;
     --parag-font-size: 1rem;
-
 }
 
 body {
@@ -47,7 +46,6 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
 }
 
 .mem-item {
@@ -63,7 +61,6 @@ body {
     height: 0;
     opacity: 0;
     transform: scale(0.001);
-    padding: 1vw 0 1vw 0;
     width: var(--img-width);
 }
 
@@ -72,10 +69,8 @@ a:link,
 a:visited,
 a:hover,
 a:active {
-
     text-decoration: none;
     outline: none;
-
 }
 
 .box>.mem-anchor:focus .mem-image {
@@ -83,17 +78,20 @@ a:active {
     opacity: 1;
     transform: scale(1);
 }
+
 .box>.mem-anchor:active .mem-image {
     height: auto;
     opacity: 0.7;
     transform: scale(1);
 }
+
 .box>.mem-anchor:focus p {
     color: #000000;
 }
+
 .box>.mem-anchor:active p {
     color: #0059D9;
-    opacity: 0.7;   
+    opacity: 0.7;
 }
 
 
