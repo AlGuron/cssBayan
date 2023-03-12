@@ -27,7 +27,7 @@ body {
 .logo-title {
     color: #000000;
     width: var(--box-width);
-    margin-top: 4vw;
+    margin: 8vw 0 8vw 0;
     font-size: var(--logo-font-size);
 }
 
@@ -40,7 +40,7 @@ body {
 }
 
 .mem-anchor {
-    padding: 1vw 0 1vw 0;
+    padding: 3vw 0 3vw 0;
 }
 
 .mem-info {
@@ -140,6 +140,14 @@ p {
         --img-width: 40vw;
         --logo-font-size: 1.8rem;
         --parag-font-size: 1.2rem;
+    }
+
+    .logo-title {
+        margin: 4vw 0 3vw 0;
+    }
+
+    .mem-anchor {
+        padding: 1vw 0 1vw 0;
     }
 }
 
