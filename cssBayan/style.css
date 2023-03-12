@@ -1,16 +1,20 @@
 body {
     --box-width: 90vw;
+    --img-width: 90vw;
     --logo-font-size: 2.5rem;
     --parag-font-size: 1rem;
+    
 }
 
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     background-color: #F5F5EB;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .main-class {
@@ -29,18 +33,20 @@ body {
 
 .box {
     border-top: #D2D9E2 solid;
-    padding: 1vw 0 1vw 0;
     width: var(--box-width);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.mem-anchor {
+    padding: 1vw 0 1vw 0;
+}
+
 .mem-info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 1vw;
 
 }
 
@@ -52,9 +58,13 @@ body {
 }
 
 .mem-image {
-    max-width: 100%;
-    display: none;
-    margin-bottom: 1vw;
+    object-fit: contain;
+    background-repeat: repeat;
+    height: 0;
+    opacity: 0;
+    transform: scale(0.001);
+    padding: 1vw 0 1vw 0;
+    width: var(--img-width);
 }
 
 
@@ -70,7 +80,13 @@ a:active {
 
 .box>.mem-anchor:focus .mem-image,
 .box>.mem-anchor:active .mem-image {
-    display: block;
+    height: auto;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.box>.mem-anchor:focus p {
+    color: #000000;
 }
 
 p {
@@ -80,27 +96,32 @@ p {
 }
 
 .status {
-    visibility: hidden;   
+    visibility: hidden;
 }
 
 
 
 @media (hover: hover) and (pointer: fine) {
 
-    .box>.mem-anchor:hover .mem-image,
-    .box:hover>.mem-image {
-        display: block;
+    
+    .box:hover .mem-image {
+        height: auto;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 1s ease;
     }
 
     .box:hover .status {
-        transform: rotate(45deg);        
+        transform: rotate(45deg);
     }
-    .main-class:hover p {        
-            color: #000000;          
-    }    
+
+    .main-class:hover p {
+        color: #000000;
+    }
+
     .main-class:hover .status {
         visibility: visible;
-    } 
+    }
 }
 
 
@@ -111,6 +132,7 @@ p {
 @media (min-width: 1080px) {
     body {
         --box-width: 90vw;
+        --img-width: 35vw;
         --logo-font-size: 2.5rem;
         --parag-font-size: 1.5rem;
     }
