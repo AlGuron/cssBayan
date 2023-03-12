@@ -3,7 +3,7 @@ body {
     --img-width: 90vw;
     --logo-font-size: 2.5rem;
     --parag-font-size: 1rem;
-    
+
 }
 
 body {
@@ -78,16 +78,24 @@ a:active {
 
 }
 
-.box>.mem-anchor:focus .mem-image,
-.box>.mem-anchor:active .mem-image {
+.box>.mem-anchor:focus .mem-image {
     height: auto;
     opacity: 1;
     transform: scale(1);
 }
-
+.box>.mem-anchor:active .mem-image {
+    height: auto;
+    opacity: 0.7;
+    transform: scale(1);
+}
 .box>.mem-anchor:focus p {
     color: #000000;
 }
+.box>.mem-anchor:active p {
+    color: #0059D9;
+    opacity: 0.7;   
+}
+
 
 p {
     color: #0059D9;
@@ -103,7 +111,7 @@ p {
 
 @media (hover: hover) and (pointer: fine) {
 
-    
+
     .box:hover .mem-image {
         height: auto;
         opacity: 1;
