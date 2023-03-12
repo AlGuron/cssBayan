@@ -78,12 +78,14 @@ a:active {
     opacity: 1;
     transform: scale(1);
     padding: 1vw 0 1vw 0;
+    transition: all 1s ease;
 }
 
 .box>.mem-anchor:active .mem-image {
     height: auto;
     opacity: 0.7;
     transform: scale(1);
+    transition: all 1s ease;
 }
 
 .box>.mem-anchor:focus p {
